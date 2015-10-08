@@ -52,13 +52,13 @@ public class OffersServiceImpl implements OffersService{
 		return dao.findAllOffersTypewise();
 	}
 
-	public Map<Offers, Integer> findTypewiseOffersCount() {
-		// TODO Auto-generated method stub
-		return dao.findTypewiseOffersCount();
-	}
-
 	public List<Offers[]> findAllOffersCompanywise() {
 		// TODO Auto-generated method stub
 		return dao.findAllOffersCompanywise();
+	}
+
+	public List<Offers> findCompanyOffers(Integer id_company) {
+		// TODO Auto-generated method stub
+		return dao.findCompanyOffers(id_company);
 	}
 }

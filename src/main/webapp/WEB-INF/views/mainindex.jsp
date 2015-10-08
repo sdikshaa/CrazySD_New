@@ -224,23 +224,43 @@
 			<div class="col-md-3 col-sm-4">
 				<div class="sidebar portfolio-sidebar">
 					<div class="sidebar-item categories">
+					
+            <div class="ipage-minor-section">
 						<h3>Today's Crazy Deals</h3>
 
+              <div class="ipage-search form-group has-feedback">
+                <input type="text"  id="searchCompany" class="form-control ipage-filter-search" placeholder=
+                "Search companies" onkeyup="javascript:loadCompaniesAjax()" />
+              </div>
+
+              <div class="ipage-filters">
+                <ul class="list-unstyled filters-list" id="companiesFilter">
+					<c:forEach items="${offerscompanywise}" var="companyoffers">
+							<li class="list-group-item"><span class="badge">${companyoffers[1]}</span> 
+<!-- 
+<label class="go-checkbox"><input type="checkbox" name="filterBy" data-catid=
+                    "23" data-type="cat" class="coupon-filter-check" />							
+ -->
+ 							<a href="javascript:loadOffersAjax(${companyoffers[0].id_company})">${companyoffers[0].company_name}</a></li>
+						
+					</c:forEach>
+				</ul>
+			  </div>	
+					  </div>				
+					
+					
+<!-- 
 						<ul class="list-group">
 					<c:forEach items="${offerscompanywise}" var="companyoffers">
 							<li class="list-group-item"><span class="badge">${companyoffers[1]}</span> 
-							<a href="#">${companyoffers[0].company_name}</a></li>
+							<a href="javascript:loadOffersAjax(${companyoffers[0].id_company})">${companyoffers[0].company_name}</a></li>
 					</c:forEach>
-					
-<!--						<li class="list-group-item"><span class="badge">2</span> <a
+
+						<li class="list-group-item"><span class="badge">2</span> <a
 								href="#">Paytm Coupons</a></li>
-							<li class="list-group-item"><span class="badge">1</span> <a
-								href="#">SnapDeals Offers</a></li>
-		
  -->	
- 						</ul>
  					</div>
-					<div class="sidebar-item  recent">
+					<div style="margin-top: 20px" class="sidebar-item  recent">
 						<div class="panel panel-primary">
 							<div class="panel-heading">Recent Searches</div>
 							<div class="panel-body">
@@ -357,193 +377,24 @@
 						</a>
 					</div>
 				</div>
-				<div class="row" style="margin-top: 50px">
-					<div
-						class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/1.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div
-						class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/2.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/3.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/4.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div
-						class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mobile">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/5.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div
-						class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mockup">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/6.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div
-						class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/7.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/8.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
-					<div
-						class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
-						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								<div class="portfolio-thumb">
-									<img src="images/product-img.jpg" class="img-responsive" alt="">
-								</div>
-								<div class="portfolio-view">
-									<ul class="nav nav-pills">
-										<li><a href="portfolio-details.html"><i
-												class="fa fa-link"></i></a></li>
-										<li><a href="images/portfolio/9.jpg"
-											data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="portfolio-info ">
-								<h2>Sailing Vivamus</h2>
-							</div>
-						</div>
-					</div>
+				<div class="row" style="margin-top: 50px" id="result">
+				
+	<c:forEach items="${offers}" var="offer">
+       <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail"> 
+          <div class="caption">
+            <h4 class="pull-right">${offer.expiry_date}</h4>
+            <h4><a href="getoffer/${offer.id_offers}">${offer.offer_title}</a> </h4>
+            <p>${offer.offer_description} <a target="_blank" href="getcouponcode/${offer.id_offers}">See more</a>.</p>
+          </div>
+          <div class="ratings">
+            <p class="pull-right">${offer.coupon_code}</p>
+            <p> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span> <span class="glyphicon glyphicon-star-empty"></span> </p>
+          </div>
+        </div>
+      </div>
+	</c:forEach>
+			</div>
 					<div class="portfolio-pagination">
 						<ul class="pagination">
 							<li><a href="#">left</a></li>
@@ -616,19 +467,6 @@ for Menu
 				</table>
 				<h1 align="center">Offers Section</h1>
 				<table>
-				<c:forEach items="${offers}" var="offer">
-					<tr>
-						<td>${offer.id_offers}</td>
-						<td>${offer.small_title}</td>
-						<td>${offer.offer_title}</td>
-						<td>${offer.offer_description}</td>
-						<td>${offer.coupon_code}</td>
-						<td>${offer.created_date}</td>
-						<td>${offer.expiry_date}</td>
-						<td>${offer.start_date}</td>
-						<td>${offer.tracking_url}</td>
-					</tr>
-				</c:forEach>
 				</table>
 			</div>
 		</div>
@@ -640,5 +478,31 @@ for Menu
 	<!-- Scrolling Nav JavaScript -->
 	<script src="<c:url value='/static/js/jquery.easing.min.js' />"></script>
 	<script src="<c:url value='/static/js/scrolling-nav.js' />"></script>
+
+	<script type="text/javascript">
+	    function loadOffersAjax(compid) {
+	        $.ajax({
+	            url : '${pageContext.request.contextPath}/offersByCompanyId',
+	            data: ({companyid : compid}),
+	            success : function(data) {
+	                $('#result').html(data);
+	            }
+	        });
+//	    	alert("hi "+compid);
+	    }
+	    
+	    function loadCompaniesAjax() {
+	        $.ajax({
+	            url : '${pageContext.request.contextPath}/companiesBySearch',
+	            data: ({search : document.getElementById("searchCompany").value}),
+	            success : function(data) {
+	                $('#companiesFilter').html(data);
+	            }
+	        });
+	        
+//	    	alert("Text "+searchVal);
+	    }
+	    
+	</script>
 </body>
 </html>

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.crazysd.springmvc.model.Company;
@@ -50,19 +52,70 @@ public class AppController {
 
 /*		for(Company comp:companies)
 			System.out.println(comp);
-		
-//		for(Offers offer:offers)
-//			System.out.println(offer);
-		
-/*		for (Category key : categorycount.keySet()) {
-		    Integer value = categorycount.get(key);
-		    System.out.println("Catgory = " + key + ", COunt = " + value);
-		}		
 */
 		return "mainindex";
 	}
 
-	/**
+	 @RequestMapping(value = "/offersByCompanyId", method = RequestMethod.GET)
+	    public  @ResponseBody   String getOffersByCompanyId(@RequestParam String companyid) {
+			List<Offers> offers = offersService.findCompanyOffers(Integer.parseInt(companyid));
+//	    String result = "Ajax ran successfully";
+	    
+		StringBuffer result = new StringBuffer("<h2>Ajax Offers Loaded.. Company ID: "+companyid+".</h2>");
+		for(Offers offer:offers)
+		{
+			result.append("<div class='col-sm-4 col-lg-4 col-md-4'><div class='thumbnail'><div class='caption'>	<h4 class='pull-right'>"+offer.getExpiry_date()+"</h4>	"
+					+ "<h4><a href='getoffer/"+offer.getId_offers()+"'>"+offer.getOffer_title()+"</a> </h4>	<p>"+offer.getOffer_description()
+					+"<a target='_blank' href='getcouponcode/"+offer.getCoupon_code()+"'>See more</a>.</p>	 </div>	 <div class='ratings'>	<p class='pull-right'>"+offer.getCoupon_code()
+					+"</p>	<p> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star-empty'></span> <span class='glyphicon glyphicon-star-empty'></span> </p>	</div> </div> </div> </div>");
+		}
+	    
+	    return result.toString();
+	  }
+	 
+	 @RequestMapping(value = "/companiesBySearch", method = RequestMethod.GET)
+	    public  @ResponseBody   String getCompaniesBySearch(@RequestParam String search) {
+//			List<Offers> offers = offersService.findCompanyOffers(Integer.parseInt(companyid));
+//	    String result = "Ajax ran successfully. Search : "+search;
+
+		List<Offers[]> offerscompanywise = offersService.findAllOffersCompanywise();
+		System.out.println(offerscompanywise);
+		StringBuffer result = new StringBuffer();
+		for(Object companyoffers[]:offerscompanywise)
+		{
+			if(((Company)companyoffers[0]).getCompany_name().toUpperCase().contains(search.toUpperCase()))
+			{
+				result.append("<li class='list-group-item'><span class='badge'>"+companyoffers[1]+"</span>"); 
+				result.append("<a href='javascript:loadOffersAjax("+((Company)companyoffers[0]).getId_company()+")'>"+((Company)companyoffers[0]).getCompany_name()+"</a></li>");
+			}
+		}		
+
+/*
+		<c:forEach items="${offerscompanywise}" var="companyoffers">
+		<li class="list-group-item"><span class="badge">${companyoffers[1]}</span> 
+<!-- 
+<label class="go-checkbox"><input type="checkbox" name="filterBy" data-catid=
+"23" data-type="cat" class="coupon-filter-check" />							
+-->
+			<a href="javascript:loadOffersAjax(${companyoffers[0].id_company})">${companyoffers[0].company_name}</a></li>
+	
+</c:forEach>
+		
+		/*	    
+		StringBuffer result = new StringBuffer("<h2>Ajax Offers Loaded.. Company ID: "+companyid+".</h2>");
+		for(Offers offer:offers)
+		{
+			result.append("<div class='col-sm-4 col-lg-4 col-md-4'><div class='thumbnail'><div class='caption'>	<h4 class='pull-right'>"+offer.getExpiry_date()+"</h4>	"
+					+ "<h4><a href='getoffer/"+offer.getId_offers()+"'>"+offer.getOffer_title()+"</a> </h4>	<p>"+offer.getOffer_description()
+					+"<a target='_blank' href='getcouponcode/"+offer.getCoupon_code()+"'>See more</a>.</p>	 </div>	 <div class='ratings'>	<p class='pull-right'>"+offer.getCoupon_code()
+					+"</p>	<p> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star-empty'></span> <span class='glyphicon glyphicon-star-empty'></span> </p>	</div> </div> </div> </div>");
+		}
+*/	    
+	    return result.toString();
+	  }
+	 
+
+	 /**
 	 * This method will list all existing users.
 	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {

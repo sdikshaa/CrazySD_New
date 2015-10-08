@@ -20,7 +20,7 @@ public interface OffersDao {
 
 	List<Offers[]> findAllOffersCompanywise();
 
-	Map<Offers, Integer> findTypewiseOffersCount();
+	List<Offers> findCompanyOffers(Integer id_company);
 
 }
 
