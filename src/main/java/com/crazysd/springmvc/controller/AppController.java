@@ -32,23 +32,24 @@ public class AppController {
 
 	@Autowired
 	OffersService offersService;
-
-	
+/*
 	@Autowired
 	MessageSource messageSource;
-
-	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+*/
+	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model) {
 
 		List<Company> companies = companyService.findAllCompanies();
 		List<Offers> offers = offersService.findAllOffers();
 		List<Offers[]> offerstypewise = offersService.findAllOffersTypewise();
 		List<Offers[]> offerscompanywise = offersService.findAllOffersCompanywise();
+		List<Offers[]> offerscategorywise = offersService.findAllOffersCategorywise();
 
 		model.addAttribute("companies", companies);
 		model.addAttribute("offers", offers);
 		model.addAttribute("offerstypewise", offerstypewise);
 		model.addAttribute("offerscompanywise", offerscompanywise);
+		model.addAttribute("offerscategorywise", offerscategorywise);
 
 /*		for(Company comp:companies)
 			System.out.println(comp);

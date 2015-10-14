@@ -53,7 +53,7 @@ public class Company {
 		this.logo_src = logo_src;
 	}
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy="company")
+	@OneToMany(mappedBy="company")
     private Set<Offers> offers;
 	
 	public Set<Offers> getOffers() {

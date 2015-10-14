@@ -6,11 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
+
+<link href="images/CrazySD_Icon.png" rel="icon">
+
 <title>Crazy Shopping Deals - Coupons, Offers, Deals</title>
 <!-- Bootstrap Core CSS -->
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
 <link href="css/CSD.css" rel="stylesheet">
+
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -22,67 +28,37 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
-  <div class="container" >
-    <div class="navbar-header page-scroll" style="float:left; border:#333 thin dotted" >
+  <div class="container">
+  
+    <div class="navbar-header page-scroll"  style="float:left;">
        <a href="index.html" class="page-scroll logo"> <img src="images/Crazy Shopping Deals Logo.png" alt="Crazy Shopping Deals" class="img-responsive" > </a> 
       
     </div>
-    <div style="float:right; border:#333 thin dotted;" class="smallmenu">
+    <div >
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-<!--  IMP     <a class="navbar-brand" href="#">Menus</a> -->
-    </div>
+<!--    <a class="navbar-brand" href="#">Menus</a> 
+-->    </div>
     
     <!-- Top Menu -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse navbar-header page-scroll searchbar" id="bs-example-navbar-collapse-1" 
- style="border:#006 thin dotted ;float:right">
-  
-      <ul class="nav navbar-nav" >
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#" >Link</a></li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search" >
-        <div class="form-group input-group" style="border:#006 thin dotted ;float:right">
-          <input type="text" class="form-control" placeholder="Search">
-          <span class="input-group-addon" style="padding:0px 5px"> <a href="#"><img src="images/Search Icon.png" height="20" width="20" > </a></span> </div>
-      </form>
-    </div>
-    <!-- Top Menu bar -->
-    <div class="collapse navbar-collapse js-navbar-collapse navbar-ex1-collapse " id="bs-example-navbar-collapse-1" style="border:#006 thin dotted ;float:right; " align="left">
-      <ul class="nav navbar-nav navbar-center col-sm-12" >
-        <li class="dropdown"><a class="dropdown-toggle " href="#home" data-toggle="dropdown" role="button" aria-expanded="false" >Home <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-        <li><a class="menu " href="#about">About us</a></li>
-        <li class="dropdown mega-dropdown"> <a href="#" class="dropdown-toggle topmenu" data-toggle="dropdown" >Our services <span class="glyphicon glyphicon-chevron-down pull-right" ></span></a>
-          <ul class="dropdown-menu mega-dropdown-menu row">
-            <li class="col-sm-6">
+    <div class="collapse navbar-collapse navbar-ex1-collapse navbar-header page-scroll" id="bs-example-navbar-collapse-1 "  style="float:right" >
+
+<div class="top-searchbar">
+		    <div class="input-group ">
+                <div class="input-group-btn search-panel dropdown mega-dropdown">
+                    <button type="button" style="height:40px;padding-left:50px; padding-right:50px" class="btn btn-default dropdown-toggle dropdown-toggle topmenu" data-toggle="dropdown">
+                    	<span id="search_concept" style="font-weight:bold; font-size:17px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif"" >Categories </span> <span class="caret"></span>
+                    </button>
+                   
+<ul class="dropdown-menu mega-dropdown-menu" style="width:700px">
+            <li class="col-sm-6 col-xs-12">
               <ul>
                 <li class="dropdown-header">New in Stores</li>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="item active"> <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
                       <h4><small>Summer dress floral prints</small></h4>
-                      <button class="btn btn-primary" type="button">49,99 €</button>
-                      <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                      <button href="#" class="btn btn-success" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+					<button type="submit" class="btn">Search</button>
                     </div>
                     <!-- End Item -->
                     <div class="item"> <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
@@ -92,7 +68,7 @@
                     </div>
                     <!-- End Item -->
                     <div class="item"> <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
-                      <h4><small>Denin jacket stamped</small></h4>
+                      <h4><small>Denin jacket stamped</small></h4>ilin
                       <button class="btn btn-primary" type="button">49,99 €</button>
                       <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
                     </div>
@@ -107,32 +83,6 @@
             </li>
             <li class="col-sm-3">
               <ul>
-                <li class="dropdown-header">Dresses</li>
-                <li><a href="#">Unique Features</a></li>
-                <li><a href="#">Image Responsive</a></li>
-                <li><a href="#">Auto Carousel</a></li>
-                <li><a href="#">Newsletter Form</a></li>
-                <li><a href="#">Four columns</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Tops</li>
-                <li><a href="#">Good Typography</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3">
-              <ul>
-                <li class="dropdown-header">Jackets</li>
-                <li><a href="#">Easy to customize</a></li>
-                <li><a href="#">Glyphicons</a></li>
-                <li><a href="#">Pull Right Elements</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Pants</li>
-                <li><a href="#">Coloured Headers</a></li>
-                <li><a href="#">Primary Buttons & Default</a></li>
-                <li><a href="#">Calls to action</a></li>
-              </ul>
-            </li>
-            <li class="col-sm-3">
-              <ul>
                 <li class="dropdown-header">Accessories</li>
                 <li><a href="#">Default Navbar</a></li>
                 <li><a href="#">Lovely Fonts</a></li>
@@ -143,20 +93,26 @@
                   <div class="form-group">
                     <label class="sr-only" for="email">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter email">
-                  </div>
+              </div>
                   <button type="submit" class="btn btn-primary btn-block">Sign in</button>
                 </form>
               </ul>
             </li>
-          </ul>
-        </li>
-        <li><a class="menu" href="#contact"> contact us</a></li>
-        <li><a class="menu" href="#about">about us</a></li>
-        <li><a class="menu" href="#about">about us</a></li>
-      </ul>
+          </ul>                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param" style="height:40px; " >         
+                <input type="text" class="form-control" name="x" placeholder="Search term..." style="height:40px;" >
+                <span class="input-group-btn">
+                      <button class="btn btn-default" type="button" style="height:40px; padding-left:25px; padding-right:25px; background-color:#09A5E8; color:#FFF; font-weight:bold; font-size:17px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif" >Search</button>
+                </span>
+            </div>
+        </div>
+        
+
+  
     </div>
-    <!-- /.navbar-collapse -->
+    <!-- Top Menu bar -->
   </div>
+    <!-- /.navbar-collapse -->
   <!-- /.container -->
 </nav>
 <!-- Intro Section -->
@@ -189,222 +145,58 @@
       </div>
       <div class="col-md-9 col-sm-8">
         <div class="recommended_items">
-          <!--recommended_items-->
-          <h2 class="title text-center">recommended items</h2>
-          <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel" style="border:#00F outset thin">
-            <div class="carousel-inner">
-              <div class="item active">
-                <div class="col-sm-4">
-                  <div class="product-image-wrapper">
-                    <div class="single-products">
-                      <div class="productinfo text-center"> <img src="images/home/recommend1.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> </div>
-                    </div>
-                  </div>
+          <!--recommended_items
+          <h2 class="title text-center">recommended items</h2>-->
+          <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12  offer-box">
+            
+                <div class="col-md-3 col-sm-12 col-lg-2 col-xl-2  thumbnail text-center offer-box-company">
+                    <img src="images/Company_Logo/Paytm-Logo.png" style="border:#09F thin outset;" height="30" width="110">
+                    <h4>100% OFF</h4>
                 </div>
-                <div class="col-sm-4">
-                  <div class="product-image-wrapper">
-                    <div class="single-products">
-                      <div class="productinfo text-center"> <img src="images/home/recommend2.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> </div>
-                    </div>
-                  </div>
+                <div class="col-md-9 col-sm-12 col-lg-8 offer-box-details">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+                    <p>
+                        The box-shadow property attaches one or more shadows to an element. ... box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit; ... Look at CSS Color Values for a complete list of possible color values. The box-shadow property attaches one or more shadows to an element. ... box-shadow: none|h-shadow v-shadow blur spread color.
+                    </p>
                 </div>
-                <div class="col-sm-4">
-                  <div class="product-image-wrapper">
-                    <div class="single-products">
-                      <div class="productinfo text-center"> <img src="images/home/recommend3.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> </div>
-                    </div>
-                  </div>
+                <div class="col-md-12 col-sm-12 col-lg-2 offer-box-coupon" align="center">
+                    <img class="coupon-bk-main" src="images/coupon_back.png" height="40" width="130" style="position:relative;">
+                    <img class="coupon-bk-extra" src="images/coupon_back.png" height="40" width="130" style="position:absolute;top:2px;right:10px; ">
+					<h4 style="position:absolute;top:2px;right:10px; text-align:center">RECH100</h4>
+                    <a href="http://www.google.com" >
+                    <img src="images/coupon_front.png" height="48" width="120" style="position:absolute;top:-11px;right:12px; ">
+					</a>
+                    <h6 class="coupon-ends" style="margin-top:10px; font-weight:bold"><span class="glyphicon glyphicon-bell"></span> Ends on 12 Oct 15</h6>
+                    <h6 class="coupon-verified" style="margin-top:10px;font-weight:bold; color:#390; font-style:italic"><span class="glyphicon glyphicon-ok"></span> Verified</h6>
                 </div>
-              </div>
-              <div class="item">
-                <div class="col-sm-4">
-                  <div class="product-image-wrapper">
-                    <div class="single-products">
-                      <div class="productinfo text-center"> <img src="images/home/recommend1.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="product-image-wrapper">
-                    <div class="single-products">
-                      <div class="productinfo text-center"> <img src="images/home/recommend2.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="product-image-wrapper">
-                    <div class="single-products">
-                      <div class="productinfo text-center"> <img src="images/home/recommend3.jpg" alt="" />
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
-                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a> </div>
+
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12  offer-box">
+                <div class="col-md-2 col-sm-2 col-lg-2 col-xl-2  thumbnail text-center offer-box-company">
+                    <img src="images/Company_Logo/Paytm-Logo.png" style="border:#09F thin outset;" height="30" width="110">
+                    <h4>100% OFF</h4>
+                </div>
+                <div class="col-md-8 col-sm-8 col-lg-8 offer-box-details">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+                    <p>
+                        The box-shadow property attaches one or more shadows to an element. ... box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit; ... Look at CSS Color Values for a complete list of possible color values. The box-shadow property attaches one or more shadows to an element. ... box-shadow: none|h-shadow v-shadow blur spread color.
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-lg-2 offer-box-coupon" align="center">
+                    <img src="images/coupon_back.png" height="40" width="130" style="position:relative;">
+					<h4 style="position:absolute;top:2px;right:10px; text-align:center">RECH100</h4>
+                    <a href="http://www.google.com" >
+                    <img src="images/coupon_front.png" height="48" width="120" style="position:absolute;top:-11px;right:12px; ">
+					</a>
+                    <h6 style="margin-top:10px; font-weight:bold">ends on 12 Oct 15</h6>
+                    <h6 style="margin-top:10px;font-weight:bold; color:#390; font-style:italic">Verified</h6>
+                </div>
+            </div>
+
         </div>
-        <div class="row" style="margin-top:50px">
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/3.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mobile">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/5.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mockup">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/6.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/7.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/8.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
-            <div class="portfolio-wrapper">
-              <div class="portfolio-single">
-                <div class="portfolio-thumb"> <img src="images/product-img.jpg" class="img-responsive" alt=""> </div>
-                <div class="portfolio-view">
-                  <ul class="nav nav-pills">
-                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                    <li><a href="images/portfolio/9.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="portfolio-info ">
-                <h2>Sailing Vivamus</h2>
-              </div>
-            </div>
-          </div>
+
           <div class="portfolio-pagination">
             <ul class="pagination">
               <li><a href="#">left</a></li>

@@ -1,10 +1,14 @@
 package com.crazysd.springmvc.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -58,6 +62,18 @@ public class Category {
 		return result;
 	}
 	
+
+	@OneToMany(mappedBy="category")
+    private Set<Offers> offers;
+	
+	public Set<Offers> getOffers() {
+		return offers;
+	}
+
+	public void setOffers(Set<Offers> offers) {
+		this.offers = offers;
+	}
+
 
 	@Override
 	public boolean equals(Object obj) {

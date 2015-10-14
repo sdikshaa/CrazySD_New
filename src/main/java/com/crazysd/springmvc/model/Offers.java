@@ -169,6 +169,19 @@ public class Offers {
 		this.company = company;
 	}
 
+	
+	@ManyToOne
+    @JoinColumn(name="id_category")
+    private Category category;
+	 
+	 public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 	/*	 
 	private Set<Offertype> offertype = new HashSet<Offertype>(0);
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "OFFERS")

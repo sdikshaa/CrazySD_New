@@ -61,4 +61,14 @@ public class OffersServiceImpl implements OffersService{
 		// TODO Auto-generated method stub
 		return dao.findCompanyOffers(id_company);
 	}
+
+	public List<Offers[]> findAllOffersCategorywise() {
+		// TODO Auto-generated method stub
+		return dao.findAllOffersCategorywise();
+	}
+
+	public List<Offers> findCategoryOffers(Integer id_category) {
+		// TODO Auto-generated method stub
+		return findCategoryOffers(id_category);
+	}
 }

@@ -23,4 +23,8 @@ public interface OffersService {
 	
 	List<Offers> findCompanyOffers(Integer id_company);
 
+
+	List<Offers[]> findAllOffersCategorywise();
+
+	List<Offers> findCategoryOffers(Integer id_category);
 }

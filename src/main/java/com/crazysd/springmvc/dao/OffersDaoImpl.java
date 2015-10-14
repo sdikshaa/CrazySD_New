@@ -61,6 +61,7 @@ public class OffersDaoImpl extends AbstractDao<Integer, Offers> implements Offer
 		projList.add(Projections.count("offertype"),"offertype_count");
 		projList.add(Projections.groupProperty("offertype"));
 
+
 		criteria.setProjection(projList);
 		criteria.addOrder(Order.asc("offer_title"));
 
@@ -95,6 +96,31 @@ public class OffersDaoImpl extends AbstractDao<Integer, Offers> implements Offer
 		Criteria criteria = createEntityCriteria().addOrder(Order.asc("id_offers"));
 		criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);//To avoid duplicates.
 		criteria.add(Restrictions.eq("company.id_company", id_company));
+		List<Offers> offers = (List<Offers>) criteria.list();
+		return offers;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Offers[]> findAllOffersCategorywise() {
+		Criteria criteria = createEntityCriteria();
+		
+		ProjectionList projList = Projections.projectionList();
+		projList.add(Projections.property("category"));
+		projList.add(Projections.count("category"),"category_count");
+		projList.add(Projections.groupProperty("category"));
+
+		criteria.setProjection(projList);
+		criteria.addOrder(Order.asc("category"));
+
+		List<Offers[]> results = criteria.list();
+		return results;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Offers> findCategoryOffers(Integer id_category) {
+		Criteria criteria = createEntityCriteria().addOrder(Order.asc("id_offers"));
+		criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);//To avoid duplicates.
+		criteria.add(Restrictions.eq("category.id_category", id_category));
 		List<Offers> offers = (List<Offers>) criteria.list();
 		return offers;
 	}

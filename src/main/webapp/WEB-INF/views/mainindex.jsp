@@ -11,8 +11,9 @@
 <meta name="author" content="">
 <title>Crazy Shopping Deals - Coupons, Offers, Deals</title>
 <!-- Bootstrap Core CSS -->
-<link href="<c:url value='/static/css/bootstrap.min.css' />"
-	rel="stylesheet"></link>
+
+<link href="<c:url value='/static/images/CrazySD_Icon.png' />" rel="icon"></link>
+<link href="<c:url value='/static/css/bootstrap.min.css' />" rel="stylesheet"></link>
 <!-- Custom CSS -->
 <link href="<c:url value='/static/css/CSD.css' />" rel="stylesheet"></link>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,13 +26,12 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#313131;"">
 	<div class="container">
-		<div class="navbar-header page-scroll"
-			style="float: left; border: #333 thin dotted">
-			<a href="index.html" class="page-scroll logo"> <img
-				src="<c:url value='/static/images/Crazy Shopping Deals Logo.png' />"
-				alt="Crazy Shopping Deals" class="img-responsive">
+		<div class="navbar-header page-scroll" style="float: left;">
+			<a href="index.html" class="logo"> 
+			<img src="<c:url value='/static/images/Crazy Shopping Deals Logo.png' />"
+				alt="Crazy Shopping Deals" >
 			</a>
 
 		</div>
@@ -46,172 +46,78 @@
 		</div>
 
 		<!-- Top Menu -->
-		<div
-			class="collapse navbar-collapse navbar-ex1-collapse navbar-header page-scroll searchbar"
-			id="bs-example-navbar-collapse-1"
-			style="border: #006 thin dotted; float: right">
+		<div class="collapse navbar-collapse navbar-ex1-collapse navbar-header page-scroll" id="bs-example-navbar-collapse-1 "  style="float:right" >
 
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-				<li><a href="#">Link</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
-						<span class="caret"></span>
-				</a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-						<li class="divider"></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul></li>
-			</ul>
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group input-group"
-					style="border: #006 thin dotted; float: right">
-					<input type="text" class="form-control" placeholder="Search">
-					<span class="input-group-addon" style="padding: 0px 5px"> <a
-						href="#"><img src="images/Search Icon.png" height="20"
-							width="20"> </a></span>
-				</div>
-			</form>
-		</div>
+<div class="top-searchbar">
+		    <div class="input-group ">
+                <div class="input-group-btn search-panel dropdown mega-dropdown">
+                    <button type="button" style="height:40px;padding-left:50px; padding-right:50px" class="btn btn-default dropdown-toggle dropdown-toggle topmenu" data-toggle="dropdown">
+                    	<span id="search_concept" style="font-weight:bold; font-size:17px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif"" >Categories </span> <span class="caret"></span>
+                    </button>
+                   
+<ul class="dropdown-menu mega-dropdown-menu" style="width:700px">
+            <li class="col-sm-6 col-xs-12">
+              <ul>
+                <li class="dropdown-header">New in Stores</li>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="item active"> <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                      <h4><small>Summer dress floral prints</small></h4>
+                      <button href="#" class="btn btn-success" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+					<button type="submit" class="btn">Search</button>
+                    </div>
+                    <!-- End Item -->
+                    <div class="item"> <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                      <h4><small>Gold sandals with shiny touch</small></h4>
+                      <button class="btn btn-primary" type="button">9,99 €</button>
+                      <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                    </div>
+                    <!-- End Item -->
+                    <div class="item"> <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                      <h4><small>Denin jacket stamped</small></h4>ilin
+                      <button class="btn btn-primary" type="button">49,99 €</button>
+                      <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                    </div>
+                    <!-- End Item -->
+                  </div>
+                  <!-- End Carousel Inner -->
+                </div>
+                <!-- /.carousel -->
+                <li class="divider"></li>
+                <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-3">
+              <ul>
+                <li class="dropdown-header">Accessories</li>
+                <li><a href="#">Default Navbar</a></li>
+                <li><a href="#">Lovely Fonts</a></li>
+                <li><a href="#">Responsive Dropdown </a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Newsletter</li>
+                <form class="form" role="form">
+                  <div class="form-group">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                </form>
+              </ul>
+            </li>
+          </ul>                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param" style="height:40px; " >         
+                <input type="text" class="form-control" name="x" placeholder="Search term..." style="height:40px;" >
+                <span class="input-group-btn">
+                      <button class="btn btn-default" type="button" style="height:40px; padding-left:25px; padding-right:25px; background-color:#09A5E8; color:#FFF; font-weight:bold; font-size:17px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif" >Search</button>
+                </span>
+            </div>
+        </div>
+        
+
+  
+    </div>
 		<!-- Top Menu bar -->
-		<div
-			class="collapse navbar-collapse js-navbar-collapse navbar-ex1-collapse "
-			id="bs-example-navbar-collapse-1"
-			style="border: #006 thin dotted; float: right;" align="left">
-			<ul class="nav navbar-nav navbar-center col-sm-12">
-				<li class="dropdown"><a class="dropdown-toggle " href="#home"
-					data-toggle="dropdown" role="button" aria-expanded="false">Home
-						<span class="caret"></span>
-				</a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-						<li class="divider"></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul></li>
-				<li><a class="menu " href="#about">About us</a></li>
-				<li class="dropdown mega-dropdown"><a href="#"
-					class="dropdown-toggle topmenu" data-toggle="dropdown">Our
-						services <span class="glyphicon glyphicon-chevron-down pull-right"></span>
-				</a>
-					<ul class="dropdown-menu mega-dropdown-menu row">
-						<li class="col-sm-6">
-							<ul>
-								<li class="dropdown-header">New in Stores</li>
-								<div id="myCarousel" class="carousel slide" data-ride="carousel">
-									<div class="carousel-inner">
-										<div class="item active">
-											<a href="#"><img
-												src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection"
-												class="img-responsive" alt="product 1"></a>
-											<h4>
-												<small>Summer dress floral prints</small>
-											</h4>
-											<button class="btn btn-primary" type="button">49,99
-												€</button>
-											<button href="#" class="btn btn-default" type="button">
-												<span class="glyphicon glyphicon-heart"></span> Add to
-												Wishlist
-											</button>
-										</div>
-										<!-- End Item -->
-										<div class="item">
-											<a href="#"><img
-												src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection"
-												class="img-responsive" alt="product 2"></a>
-											<h4>
-												<small>Gold sandals with shiny touch</small>
-											</h4>
-											<button class="btn btn-primary" type="button">9,99 €</button>
-											<button href="#" class="btn btn-default" type="button">
-												<span class="glyphicon glyphicon-heart"></span> Add to
-												Wishlist
-											</button>
-										</div>
-										<!-- End Item -->
-										<div class="item">
-											<a href="#"><img
-												src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection"
-												class="img-responsive" alt="product 3"></a>
-											<h4>
-												<small>Denin jacket stamped</small>
-											</h4>
-											<button class="btn btn-primary" type="button">49,99
-												€</button>
-											<button href="#" class="btn btn-default" type="button">
-												<span class="glyphicon glyphicon-heart"></span> Add to
-												Wishlist
-											</button>
-										</div>
-										<!-- End Item -->
-									</div>
-									<!-- End Carousel Inner -->
-								</div>
-								<!-- /.carousel -->
-								<li class="divider"></li>
-								<li><a href="#">View all Collection <span
-										class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
-							</ul>
-						</li>
-						<li class="col-sm-3">
-							<ul>
-								<li class="dropdown-header">Dresses</li>
-								<li><a href="#">Unique Features</a></li>
-								<li><a href="#">Image Responsive</a></li>
-								<li><a href="#">Auto Carousel</a></li>
-								<li><a href="#">Newsletter Form</a></li>
-								<li><a href="#">Four columns</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Tops</li>
-								<li><a href="#">Good Typography</a></li>
-							</ul>
-						</li>
-						<li class="col-sm-3">
-							<ul>
-								<li class="dropdown-header">Jackets</li>
-								<li><a href="#">Easy to customize</a></li>
-								<li><a href="#">Glyphicons</a></li>
-								<li><a href="#">Pull Right Elements</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Pants</li>
-								<li><a href="#">Coloured Headers</a></li>
-								<li><a href="#">Primary Buttons & Default</a></li>
-								<li><a href="#">Calls to action</a></li>
-							</ul>
-						</li>
-						<li class="col-sm-3">
-							<ul>
-								<li class="dropdown-header">Accessories</li>
-								<li><a href="#">Default Navbar</a></li>
-								<li><a href="#">Lovely Fonts</a></li>
-								<li><a href="#">Responsive Dropdown </a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Newsletter</li>
-								<form class="form" role="form">
-									<div class="form-group">
-										<label class="sr-only" for="email">Email address</label> <input
-											type="email" class="form-control" id="email"
-											placeholder="Enter email">
-									</div>
-									<button type="submit" class="btn btn-primary btn-block">Sign
-										in</button>
-								</form>
-							</ul>
-						</li>
-					</ul></li>
-				<li><a class="menu" href="#contact"> contact us</a></li>
-				<li><a class="menu" href="#about">about us</a></li>
-				<li><a class="menu" href="#about">about us</a></li>
-			</ul>
-		</div>
+		
 		<!-- /.navbar-collapse -->
 	</div>
 	<!-- /.container --> </nav>
@@ -226,7 +132,7 @@
 					<div class="sidebar-item categories">
 					
             <div class="ipage-minor-section">
-						<h3>Today's Crazy Deals</h3>
+						<h3>Company wise Deals</h3>
 
               <div class="ipage-search form-group has-feedback">
                 <input type="text"  id="searchCompany" class="form-control ipage-filter-search" placeholder=
@@ -246,6 +152,23 @@
 					</c:forEach>
 				</ul>
 			  </div>	
+			  
+						<h3>Category wise Deals</h3>
+              <div class="ipage-filters">
+                <ul class="list-unstyled filters-list" id="companiesFilter">
+					<c:forEach items="${offerscategorywise}" var="categoryoffers">
+							<li class="list-group-item"><span class="badge">${categoryoffers[1]}</span> 
+<!-- 
+<label class="go-checkbox"><input type="checkbox" name="filterBy" data-catid=
+                    "23" data-type="cat" class="coupon-filter-check" />							
+ -->
+ 							<a href="javascript:loadOffersAjax(${categoryoffers[0].id_category})">${categoryoffers[0].category_name}</a></li>
+						
+					</c:forEach>
+				</ul>
+			  </div>	
+			  
+			  
 					  </div>				
 					
 					
@@ -281,102 +204,51 @@
 			<div class="col-md-9 col-sm-8">
 				<div class="recommended_items">
 					<!--recommended_items-->
-					<h2 class="title text-center">recommended items</h2>
-					<div id="recommended-item-carousel" class="carousel slide"
-						data-ride="carousel" style="border: #00F outset thin">
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-4">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/recommend1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/recommend2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/recommend3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-4">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/recommend1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/recommend2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/recommend3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i
-													class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a class="left recommended-item-control"
-							href="#recommended-item-carousel" data-slide="prev"> <i
-							class="fa fa-angle-left"></i>
-						</a> <a class="right recommended-item-control"
-							href="#recommended-item-carousel" data-slide="next"> <i
-							class="fa fa-angle-right"></i>
-						</a>
-					</div>
-				</div>
+					<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel" >
+						
+<!--  New Offers  
+	<c:forEach items="${offers}" var="offer">
+       <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail"> 
+          <div class="caption">
+            <h4 class="pull-right">${offer.expiry_date}</h4>
+            <h4><a href="getoffer/${offer.id_offers}">${offer.offer_title}</a> </h4>
+            <p>${offer.offer_description} <a target="_blank" href="getcouponcode/${offer.id_offers}">See more</a>.</p>
+          </div>
+          <div class="ratings">
+            <p class="pull-right">${offer.coupon_code}</p>
+            <p> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span> <span class="glyphicon glyphicon-star-empty"></span> </p>
+          </div>
+        </div>
+      </div>
+	</c:forEach>
+-->
+	<c:forEach items="${offers}" var="offer">
+			<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12  offer-box">
+            
+                <div class="col-md-3 col-sm-12 col-lg-2 col-xl-2  thumbnail text-center offer-box-company">
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin outset;" height="30" width="110">
+                    <h4>100% OFF</h4>
+                </div>
+                <div class="col-md-9 col-sm-12 col-lg-8 offer-box-details">
+		            <h4><a href="getoffer/${offer.id_offers}">${offer.offer_title}</a> </h4>
+		            <p>${offer.offer_description}</p>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-2 offer-box-coupon" align="center">
+                    <img class="coupon-bk-main" src="<c:url value='/static/images/coupon_back.png' />" height="40" width="130" style="position:relative;">
+                    <img class="coupon-bk-extra" src="<c:url value='/static/images/coupon_back.png' />" height="40" width="130" style="position:absolute;top:2px;right:10px; ">
+					<h4 style="position:absolute;top:2px;right:10px; text-align:center">${offer.coupon_code}</h4>
+                    <a href="getcouponcode/${offer.id_offers}" >
+                    <img src="<c:url value='/static/images/coupon_front.png' />" height="48" width="120" style="position:absolute;top:-11px;right:12px; ">
+					</a>
+                    <h6 class="coupon-ends" style="margin-top:10px; font-weight:bold"><span class="glyphicon glyphicon-bell"></span> Ends on 12 Oct 15</h6>
+                    <h6 class="coupon-verified" style="margin-top:10px;font-weight:bold; color:#390; font-style:italic"><span class="glyphicon glyphicon-ok"></span> Verified</h6>
+                </div>
+            </div>     
+	</c:forEach>
+                               
+<!--  New Offers Close 
+
 				<div class="row" style="margin-top: 50px" id="result">
 				
 	<c:forEach items="${offers}" var="offer">
@@ -394,7 +266,13 @@
         </div>
       </div>
 	</c:forEach>
+	
 			</div>
+
+-->                     
+                        
+					</div>
+				</div>
 					<div class="portfolio-pagination">
 						<ul class="pagination">
 							<li><a href="#">left</a></li>
