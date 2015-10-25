@@ -1,6 +1,10 @@
 package com.crazysd.springmvc.controller;
 
 import java.util.List;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -58,17 +62,32 @@ public class AppController {
 	}
 
 	 @RequestMapping(value = "/offersByCompanyId", method = RequestMethod.GET)
-	    public  @ResponseBody   String getOffersByCompanyId(@RequestParam String companyid) {
+	    public  @ResponseBody   String getOffersByCompanyId(@RequestParam String companyid, HttpServletRequest request) {
+
+		 System.out.println("Ajax recieved...");
 			List<Offers> offers = offersService.findCompanyOffers(Integer.parseInt(companyid));
 //	    String result = "Ajax ran successfully";
-	    
+		 ServletContext context = request.getServletContext();
+        String appPath = context.getRealPath("/");
+        appPath=appPath.replace('\\','/');	
+        appPath=appPath.replaceAll(".metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/", "");
+        System.out.println("imgPath = " + appPath+"src/main/webapp/static/images/Show_Coupon.png");
+			
 		StringBuffer result = new StringBuffer("<h2>Ajax Offers Loaded.. Company ID: "+companyid+".</h2>");
 		for(Offers offer:offers)
 		{
+			result.append("<div class='col-sm-6 col-md-4 col-lg-3 newofferbox'>	<div class='thumbnail text-center mainpage-offers-box-all'>	<h4 class='offer-off-title' >"
+					+"100% OFF"+"</h4> <img class='companylogo-box' src='"+appPath+"src/main/webapp/static/images/Company_Logo/Paytm-Logo.png' height='30' width='110'> <h5>"
+					+offer.getOffer_title()+"</h5> <a href='#' data-toggle='modal' data-target='#lightbox' data-link='http://www.paytm.com/' href='http://www.paytm.com' target='_blank'>"
+					+"<img src='"+appPath+"src/main/webapp/static/images/Show_Coupon.png' height='30' width='120'></a> <div class='showalloffers'>"
+					+"<a href='#' class='add-to-cart'><i class='fa fa-shopping-cart'> All Recharge offers</i></a></div></div></div>");
+
+			/*			
 			result.append("<div class='col-sm-4 col-lg-4 col-md-4'><div class='thumbnail'><div class='caption'>	<h4 class='pull-right'>"+offer.getExpiry_date()+"</h4>	"
 					+ "<h4><a href='getoffer/"+offer.getId_offers()+"'>"+offer.getOffer_title()+"</a> </h4>	<p>"+offer.getOffer_description()
 					+"<a target='_blank' href='getcouponcode/"+offer.getCoupon_code()+"'>See more</a>.</p>	 </div>	 <div class='ratings'>	<p class='pull-right'>"+offer.getCoupon_code()
 					+"</p>	<p> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star'></span> <span class='glyphicon glyphicon-star-empty'></span> <span class='glyphicon glyphicon-star-empty'></span> </p>	</div> </div> </div> </div>");
+*/			
 		}
 	    
 	    return result.toString();

@@ -10,21 +10,23 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Crazy Shopping Deals - Coupons, Offers, Deals</title>
-<!-- Bootstrap Core CSS -->
 
 <link href="<c:url value='/static/images/CrazySD_Icon.png' />" rel="icon"></link>
 <link href="<c:url value='/static/css/bootstrap.min.css' />" rel="stylesheet"></link>
-<!-- Custom CSS -->
 <link href="<c:url value='/static/css/CSD.css' />" rel="stylesheet"></link>
+
+<link href="<c:url value='/static/css/jcarousel.responsive.css' />" rel="stylesheet" type="text/css">
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" background="<c:url value='/static/images/bg.jpg' />" >
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#313131;"">
 	<div class="container">
@@ -33,30 +35,27 @@
 			<img src="<c:url value='/static/images/Crazy Shopping Deals Logo.png' />"
 				alt="Crazy Shopping Deals" >
 			</a>
-
 		</div>
-		<div style="float: right; border: #333 thin dotted;" class="smallmenu">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<!--  IMP     <a class="navbar-brand" href="#">Menus</a> -->
-		</div>
-
+    <div >
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+<!--    <a class="navbar-brand" href="#">Menus</a> 
+--> 
+   	</div>
+    
 		<!-- Top Menu -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse navbar-header page-scroll" id="bs-example-navbar-collapse-1 "  style="float:right" >
+		<div class="collapse navbar-collapse navbar-ex1-collapse navbar-header" id="bs-example-navbar-collapse-1 "  style="float:right" >
 
 <div class="top-searchbar">
 		    <div class="input-group ">
                 <div class="input-group-btn search-panel dropdown mega-dropdown">
                     <button type="button" style="height:40px;padding-left:50px; padding-right:50px" class="btn btn-default dropdown-toggle dropdown-toggle topmenu" data-toggle="dropdown">
-                    	<span id="search_concept" style="font-weight:bold; font-size:17px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif"" >Categories </span> <span class="caret"></span>
+                        <span id="search_concept" style="font-weight:bold; font-size:17px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif" >
+                        Categories </span> 
+                    	<span class="glyphicon glyphicon-menu-hamburger"></span>
                     </button>
-                   
-<ul class="dropdown-menu mega-dropdown-menu" style="width:700px">
-            <li class="col-sm-6 col-xs-12">
+     
+<ul class="dropdown-menu mega-dropdown-menu">
+            <li class="col-sm-6 col-md-6 col-lg-6 col-xs-12">
               <ul>
                 <li class="dropdown-header">New in Stores</li>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -124,7 +123,83 @@
 	<!-- Intro Section -->
 
 
-	<section id="projects" class="padding-top">
+<section id="projects" class="padding-top" >
+
+
+
+<div class="container" style="margin-top:100px;">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active">
+          <a href="#home" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-thumbs-up"></span> Top Brands
+          </a>
+      </li>
+      <li><a href="#profile" role="tab" data-toggle="tab">
+          <span class="glyphicon glyphicon-phone"></span> Mobile Recharges 
+          </a>
+      </li>
+      <li>
+          <a href="#messages" role="tab" data-toggle="tab">
+              <span class="glyphicon glyphicon-sunglasses"></span> Fashion & Grossary
+          </a>
+      </li>
+      <li>
+          <a href="#settings" role="tab" data-toggle="tab">
+              <i class="fa fa-cog"></i> Pata Nahi
+          </a>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane fade active in" id="home">
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>  
+<a href="#"><img src="images/logo-hp.png" /></a>
+<a href="#"><img src="images/logo-youtube.png" /></a>
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>
+      </div>
+      <div class="tab-pane fade" id="profile">
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>  
+<a href="#"><img src="images/logo-hp.png" /></a>
+<a href="#"><img src="images/logo-youtube.png" /></a>
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>
+      </div>
+      <div class="tab-pane fade" id="messages">
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>  
+<a href="#"><img src="images/logo-hp.png" /></a>
+<a href="#"><img src="images/logo-youtube.png" /></a>
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>
+      </div>
+      <div class="tab-pane fade" id="settings">
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>  
+<a href="#"><img src="images/logo-hp.png" /></a>
+<a href="#"><img src="images/logo-youtube.png" /></a>
+<a href="#"><img src="images/logo-nyt.png" /></a>
+<a href="#"><img src="images/logo-microsoft.png" /></a>
+<a href="#"><img src="images/logo-ebay.png" /></a>
+      </div>
+    </div>
+    
+</div>
+
+	
+	
+	
 	<div class="container contentarea">
 		<div class="row">
 			<div class="col-md-3 col-sm-4">
@@ -142,13 +217,8 @@
               <div class="ipage-filters">
                 <ul class="list-unstyled filters-list" id="companiesFilter">
 					<c:forEach items="${offerscompanywise}" var="companyoffers">
-							<li class="list-group-item"><span class="badge">${companyoffers[1]}</span> 
-<!-- 
-<label class="go-checkbox"><input type="checkbox" name="filterBy" data-catid=
-                    "23" data-type="cat" class="coupon-filter-check" />							
- -->
- 							<a href="javascript:loadOffersAjax(${companyoffers[0].id_company})">${companyoffers[0].company_name}</a></li>
-						
+						<li class="list-group-item"><span class="badge">${companyoffers[1]}</span> 
+						<a href="javascript:loadOffersAjax(${companyoffers[0].id_company})">${companyoffers[0].company_name}</a></li>
 					</c:forEach>
 				</ul>
 			  </div>	
@@ -203,8 +273,125 @@
 			</div>
 			<div class="col-md-9 col-sm-8">
 				<div class="recommended_items">
-					<!--recommended_items-->
-					<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel" >
+
+
+
+
+            <h3> Today's Saving </h3>
+
+<div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                        <li>
+            <div class="thumbnail text-center mainpage-offer-box" >
+                    <h4 class="offer-off-title" >100% OFF</h4>
+                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                    <h5 style="height:45px;"><b>Lorem ipsum dolor sit ametelit.</b></h5>
+                    <a href="#" data-toggle="modal" data-target="#lightbox"> 
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                    </a>
+					<div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                    <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                    </div>
+            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+<!--                <p class="jcarousel-pagination"></p>
+-->
+</div>
+
+
+
+
+
+
+<!--recommended_items-->
+            <h3> Today's Offers </h3>
+<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel" >
+	<div id="offersFilter">
 						
 <!--  New Offers  
 	<c:forEach items="${offers}" var="offer">
@@ -223,6 +410,64 @@
       </div>
 	</c:forEach>
 -->
+
+<c:forEach items="${offers}" var="offer">
+<!-- 
+            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0px; margin:0px;">
+                <div class="thumbnail text-center mainpage-offers-box-all" >
+                        <h4 class="offer-off-title" >100% OFF</h4>
+	                    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="30" width="110">
+                        <h5 style="height:45px;"><b><a href="getoffer/${offer.id_offers}">${offer.offer_title}</a> </b></h5>
+                    	<img src="<c:url value='/static/images/Show_Coupon.png' />" class="coupon-bk-main" height="30" width="120" style="position:relative;">
+                        <div align="center" style="width:100%; border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                        </div>
+                </div>
+			</div>
+ -->			
+			
+			            <div class="col-sm-6 col-md-4 col-lg-3 newofferbox">
+                <div class="thumbnail text-center mainpage-offers-box-all" >
+                        <h4 class="offer-off-title" >100% OFF</h4>
+                        <img class="companylogo-box" src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" height="30" width="110">
+                        <h5>${offer.offer_title}</h5>
+	                    <a href="#" data-toggle="modal" data-target="#lightbox" data-link="http://www.grabon.in/load/coupon/?go=10521" href="http://www.paytm.com" target="_blank"> 
+    	                    <img src="<c:url value='/static/images/Show_Coupon.png' />" height="30" width="120">
+						</a>
+                        <div class="showalloffers">
+	                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"> All Recharge offers</i></a> 
+                        </div>
+                </div>
+			</div>
+			
+			
+</c:forEach>
+			</div>
+<!-- 
+	<div class="col-md-3 col-sm-12 col-lg-3 col-xl-3 text-center offer-box" style="height: 245px">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12 thumbnail text-center mainpage-offer-box-company">
+		    <h4 style="font-family:Arial, Helvetica, sans-serif">100% OFF</h4>
+		    <img src="<c:url value='/static/images/Company_Logo/Paytm-Logo.png' />" style="border:#09F thin solid;" height="40" width="110">
+		</div>
+		    <h5><a href="getoffer/${offer.id_offers}">${offer.offer_title}</a> </h5>
+		<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+	        <img class="coupon-bk-main" src="<c:url value='/static/images/coupon_back.png' />" height="40" width="130" style="position:relative;">
+	        <img class="coupon-bk-extra" src="<c:url value='/static/images/coupon_back.png' />" height="40" width="130" style="position:absolute;bottom:0px;right:50px; ">
+	        <h4 style="position:absolute;bottom:0px;right:40px; text-align:center">${offer.coupon_code}</h4>
+        	<a href="getcouponcode/${offer.id_offers}"  >
+        		<img src="<c:url value='/static/images/coupon_front.png' />" height="48" width="130" style="position:absolute;top:-10px;right:35px;">
+        	</a>
+		</div>
+		<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12" style="border-top:#09F thin solid; margin-top:10px; padding-top:5px;">
+    	<a href="#" class="add-to-cart"><i class="fa fa-shopping-cart">Show all Paytm offers</i></a> 
+	    </div>
+	</div>
+-->
+
+
+
+
+<!-- 
 	<c:forEach items="${offers}" var="offer">
 			<div class="col-md-12 col-sm-12 col-lg-12 col-xl-12  offer-box">
             
@@ -246,31 +491,7 @@
                 </div>
             </div>     
 	</c:forEach>
-                               
-<!--  New Offers Close 
-
-				<div class="row" style="margin-top: 50px" id="result">
-				
-	<c:forEach items="${offers}" var="offer">
-       <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail"> 
-          <div class="caption">
-            <h4 class="pull-right">${offer.expiry_date}</h4>
-            <h4><a href="getoffer/${offer.id_offers}">${offer.offer_title}</a> </h4>
-            <p>${offer.offer_description} <a target="_blank" href="getcouponcode/${offer.id_offers}">See more</a>.</p>
-          </div>
-          <div class="ratings">
-            <p class="pull-right">${offer.coupon_code}</p>
-            <p> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span> <span class="glyphicon glyphicon-star-empty"></span> </p>
-          </div>
-        </div>
-      </div>
-	</c:forEach>
-	
-			</div>
-
--->                     
-                        
+ -->                        
 					</div>
 				</div>
 					<div class="portfolio-pagination">
@@ -316,39 +537,39 @@ for Menu
 	<!-- /.nav-collapse -->
 
 
+<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+                
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+                        <div class="modal-body">
+                            <h3>here is your requested <b>PAYTM</b> code.</h3>
+                            <div class="show-code">
+                                <span class="coupon-code" id="10521" data-gid="GRAB400">PAYTM500</span>
+                                <a href="javascript:void(0);" class="btn btn-info" data-clipboard-text="GRAB400" id="cpy-btn">Copy Code</a>
+                            </div>
+                            
+                            <p><a href="goPaytm.com" target="_blank" title="Paytm" rel="nofollow">Click here to go Paytm</a></p>
+                    <img src="images/Company_Logo/Paytm-Logo.png" style="border:#09F thin solid; margin-bottom:10px;" height="50" width="110">
+                            <div class="coupon-box">
+                                <div class="coupon-info">
+                                    <h3>Get Rs 400 OFF Across All Cities In India- Free Ride</h3>
+                                    <div class="coupon-description shortened">
+                                        <p>Verified on 25 Oct 2015. Use this Uber Coupon and Get Flat Rs 400 OFF on your first ride. This Is valid for New Users across all Cities in India. Download the app, apply the code and ride for free. This is valid in Bangalore, Ahmedabad, Chandigarh, Mumbai, Hyderabad, Delhi, Pune, Jaipur, Kolkata, Visakhapatnam, Mysore, Chennai, Nagpur,Bhubaneswar, Indore, Vadodara, Surat. etc. Book Now. <br>Note: Use the above said Code in the Promotions Tab in Uber APP. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <small><a href="http://www.grabon.in/uber-coupons/" title="All Recharge Offers">View all Recharge Coupons</a></small>
+                </div>
+</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 align="center">OFferTypewise Section</h1>
-				<table border="1" bordercolor="black" >
-				<c:forEach items="${offerstypewise}" var="offerstypewise">
-					<tr>
-						<td>${offerstypewise[0]}</td>
-						<td>${offerstypewise[1]}</td>
-						<td>${offerstypewise[2].offertype_name}</td>
-						<td>${offerstypewise[3]}</td>
-					</tr>
-				</c:forEach>
-				</table>
-				<h1 align="center">Companies Section</h1>
-				<table>
-				<c:forEach items="${companies}" var="company">
-					<tr>
-						<td>${company.id_company}</td>
-						<td>${company.company_name}</td>
-						<td>${company.logo_src}</td>
-						<td><a href="<c:url value='/edit-user-${company.id_company}' />" class="btn btn-success custom-width">edit</a></td>
-						<td><a href="<c:url value='/delete-user-${company.company_name}' />" class="btn btn-danger custom-width">delete</a></td>
-					</tr>
-				</c:forEach>
-				</table>
-				<h1 align="center">Offers Section</h1>
-				<table>
-				</table>
-			</div>
-		</div>
-	</div>
+
+
+
+
+
+
 	<!-- jQuery -->
 	<script src="<c:url value='/static/js/jquery.js' />"></script>
 	<!-- Bootstrap Core JavaScript -->
@@ -356,14 +577,16 @@ for Menu
 	<!-- Scrolling Nav JavaScript -->
 	<script src="<c:url value='/static/js/jquery.easing.min.js' />"></script>
 	<script src="<c:url value='/static/js/scrolling-nav.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/static/js/jquery.jcarousel.min.js' />"></script>
+    <script type="text/javascript" src="<c:url value='/static/js/jcarousel.responsive.js' />"></script>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 	    function loadOffersAjax(compid) {
 	        $.ajax({
 	            url : '${pageContext.request.contextPath}/offersByCompanyId',
 	            data: ({companyid : compid}),
 	            success : function(data) {
-	                $('#result').html(data);
+	                $('#offersFilter').html(data);
 	            }
 	        });
 //	    	alert("hi "+compid);
@@ -381,6 +604,6 @@ for Menu
 //	    	alert("Text "+searchVal);
 	    }
 	    
-	</script>
+</script>
 </body>
 </html>
